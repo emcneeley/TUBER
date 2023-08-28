@@ -49,13 +49,3 @@ CREATE TABLE
         FOREIGN KEY(studentId) REFERENCES accounts(id) ON DELETE CASCADE,
         FOREIGN KEY (tutorId) REFERENCES accounts(id) ON DELETE CASCADE
     ) default charset utf8 COMMENT '';
-
-CREATE TABLE
-    IF NOT EXISTS testTable(
-        id INT NOT NULL AUTO_INCREMENT primary key COMMENT 'primary key',
-        ratingCount INT NOT NULL,
-        studentID VARCHAR(255),
-        tutorId VARCHAR(255),
-        FOREIGN KEY(studentId) REFERENCES accounts(id) ON DELETE CASCADE,
-        FOREIGN KEY (tutorId) REFERENCES accounts(id) ON DELETE CASCADE
-    ) default charset utf8 COMMENT '';
