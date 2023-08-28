@@ -11,6 +11,6 @@ public class Profile
   public string Id { get; set; }
   public string Name { get; set; }
   public string Picture { get; set; }
-
-  public bool
+  public bool IsTutor { get; set; }
+  public bool IsStudent { get; set; }
 }

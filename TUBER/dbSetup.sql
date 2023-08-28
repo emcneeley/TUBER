@@ -7,7 +7,9 @@ CREATE TABLE
         updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Last Update',
         name varchar(255) COMMENT 'User Name',
         email varchar(255) COMMENT 'User Email',
-        picture varchar(255) COMMENT 'User Picture'
+        picture varchar(255) COMMENT 'User Picture',
+        isTutor TINYINT NOT NULL DEFAULT 0,
+        isStudent TINYINT NOT NULL DEFAULT 1
     ) default charset utf8 COMMENT '';
 
 CREATE TABLE
