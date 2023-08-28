@@ -1,4 +1,4 @@
--- Active: 1690396241212@@13.52.235.253@3306@TUBER
+-- Active: 1693253606889@@13.52.235.253@3306@TUBER
 
 CREATE TABLE
     IF NOT EXISTS accounts(
@@ -40,6 +40,16 @@ CREATE TABLE
 
 CREATE TABLE
     IF NOT EXISTS reviews(
+        id INT NOT NULL AUTO_INCREMENT primary key COMMENT 'primary key',
+        ratingCount INT NOT NULL,
+        studentID VARCHAR(255),
+        tutorId VARCHAR(255),
+        FOREIGN KEY(studentId) REFERENCES accounts(id) ON DELETE CASCADE,
+        FOREIGN KEY (tutorId) REFERENCES accounts(id) ON DELETE CASCADE
+    ) default charset utf8 COMMENT '';
+
+CREATE TABLE
+    IF NOT EXISTS testTable(
         id INT NOT NULL AUTO_INCREMENT primary key COMMENT 'primary key',
         ratingCount INT NOT NULL,
         studentID VARCHAR(255),
