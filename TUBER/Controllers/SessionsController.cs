@@ -21,7 +21,6 @@ public class SessionsController : ControllerBase
         {
             Account userInfo = await _auth.GetUserInfoAsync<Account>
             (HttpContext);
-            sessionData.CreatorId = userInfo.Id;
 
             Session session = _sessionsService.CreateSession(sessionData);
             return new ActionResult<Session>(Ok(session));

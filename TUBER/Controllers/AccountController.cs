@@ -5,6 +5,8 @@ namespace TUBER.Controllers;
 public class AccountController : ControllerBase
 {
   private readonly AccountService _accountService;
+
+  private readonly SessionsService _sessionsService;
   private readonly Auth0Provider _auth0Provider;
 
   public AccountController(AccountService accountService, Auth0Provider auth0Provider)
