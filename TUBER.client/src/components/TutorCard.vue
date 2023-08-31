@@ -26,7 +26,7 @@ export default {
   background-position: center center;
   background-size: cover;
   height: 50vh;
-  width: 65%;
+  width: 125%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
