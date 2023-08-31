@@ -13,10 +13,11 @@ CREATE TABLE
     ) default charset utf8 COMMENT '';
 
 CREATE TABLE
-    IF NOT EXISTS session(
+    IF NOT EXISTS sessions(
         id INT NOT NULL AUTO_INCREMENT primary key COMMENT 'primary key',
         createdAt DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Time Created',
         updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Last Update',
+        creatorId VARCHAR(255) NOT NULL,
         studentId VARCHAR (255),
         tutorId VARCHAR (255),
         topicId INT NOT NULL,
@@ -27,11 +28,12 @@ CREATE TABLE
         description VARCHAR (300),
         FOREIGN KEY(studentId) REFERENCES accounts(id) ON DELETE CASCADE,
         FOREIGN KEY (tutorId) REFERENCES accounts(id) ON DELETE CASCADE,
-        FOREIGN KEY (topicId) REFERENCES topic(id) ON DELETE CASCADE
+        FOREIGN KEY (topicId) REFERENCES topics(id) ON DELETE CASCADE,
+        FOREIGN KEY (creatorId) REFERENCES accounts(id) ON DELETE CASCADE
     ) default charset utf8 COMMENT '';
 
 CREATE TABLE
-    IF NOT EXISTS topic(
+    IF NOT EXISTS topics(
         id INT NOT NULL AUTO_INCREMENT primary key COMMENT 'primary key',
         subject VARCHAR (100),
         hourlyRate INT NOT NULL,
@@ -49,3 +51,5 @@ CREATE TABLE
         FOREIGN KEY(studentId) REFERENCES accounts(id) ON DELETE CASCADE,
         FOREIGN KEY (tutorId) REFERENCES accounts(id) ON DELETE CASCADE
     ) default charset utf8 COMMENT '';
+
+DROP TABLE `reviews`;
