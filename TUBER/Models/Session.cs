@@ -19,7 +19,7 @@ namespace TUBER.Models
         public string Topic { get; set; }
         public string Description { get; set; }
         public Profile Creator { get; set; }
-        public string CreatorId { get; set; }
+        public Account CreatorId { get; set; }
 
 
     }
