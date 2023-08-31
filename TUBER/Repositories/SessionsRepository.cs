@@ -20,7 +20,7 @@ public class SessionsRepository
       SELECT
       s.*,
       creator.*
-      FROM sessions s
+      FROM session s
       JOIN accounts creator on s.creatorId = creator.id
       WHERE s.id = LAST_INSERT_ID()
       ;";

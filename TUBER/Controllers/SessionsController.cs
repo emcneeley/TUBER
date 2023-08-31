@@ -7,7 +7,7 @@ public class SessionsController : ControllerBase
     private readonly SessionsService _sessionsService;
     private readonly Auth0Provider _auth;
 
-    public SessionsController(SessionsService sessionsService)
+    public SessionsController(SessionsService sessionsService, Auth0Provider auth)
     {
         _sessionsService = sessionsService;
         _auth = auth;
@@ -30,6 +30,6 @@ public class SessionsController : ControllerBase
         {
             return new ActionResult<Session>(BadRequest(e.Message));
         }
-    } 
+    }
 
 }
