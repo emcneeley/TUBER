@@ -23,13 +23,13 @@ export default {
   position: relative;
   background-image: url("../assets/img/chalkboard.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   height: 50vh;
   width: 125%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  // flex-direction: column;
+  // justify-content: flex-end;
 }
 
 .text {

@@ -8,6 +8,15 @@
       </div>
     </div>
   </div>
+
+  <!-- <section class="row justify-content-center">
+          <div class="col-12">
+            <div class="d-flex justify-content-around my-3 rounded p-3 ">
+              <StudentCard />
+              <TutorCard />
+            </div>
+          </div>
+        </section> -->
 </template>
 
 <script>
@@ -23,13 +32,13 @@ export default {
   position: relative;
   background-image: url("../assets/img/books.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   height: 50vh;
   width: 125%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  // flex-direction: column;
+  // justify-content: flex-end;
 }
 
 .text {
