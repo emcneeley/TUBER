@@ -41,9 +41,9 @@
         <div class="col-md-12">
           <h1 class="text-white my-5 mx-3 Logo"><b>TUBER</b></h1>
         </div>
-        <h1 class="d-flex justify-content-center text-white">WELCOME, USER</h1>
+        <h1 class="d-flex justify-content-center text-white p-3">WELCOME, USER</h1>
         <img src="../assets/img/profileImg.png" alt="profile image" class="p-5 profileImg">
-        <h5 class="d-flex justify-content-center text-white p-1">TUBER AS</h5>
+        <h5 class="d-flex justify-content-center text-white p-3">TUBER AS</h5>
         <div class="d-flex justify-content-around">
           <p class="button bg-dark rounded text-white p-1"><b>STUDENT</b></p>
           <p class="button bg-dark rounded text-white p-1"><b>TUTOR</b></p>
